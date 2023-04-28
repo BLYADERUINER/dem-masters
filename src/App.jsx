@@ -1,14 +1,9 @@
+import Header from "./components/Header";
+
 function App() {
   return (
     <>
-      <header>
-        <div>
-          <img src="" alt="" />
-          <h2>Dem-Master: Демонтаж зданий любой сложности</h2>
-        </div>
-        <nav>
-        </nav>
-      </header>
+      <Header />
       <main>
         <div className="react-slick"></div>
         <section className="description"></section>
@@ -17,8 +12,7 @@ function App() {
       </main>
       <footer>
         <p></p>
-        <div>
-        </div>
+        <div></div>
       </footer>
     </>
   );
