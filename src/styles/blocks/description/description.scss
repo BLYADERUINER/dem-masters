@@ -1,0 +1,61 @@
+.description {
+  height: 50%;
+  display: flex;
+  padding: 45px 20px;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 950px;
+    gap: 45px;
+  }
+
+  &__title {
+    font-family: $defaultFont;
+    color: #2e2e2e;
+    font-size: 34px;
+    line-height: 36px;
+    margin: 0;
+  }
+
+  &__paragraph {
+    font-family: $defaultFont;
+    color: #2e2e2e;
+    font-size: 22px;
+    line-height: 24px;
+    margin: 0;
+  }
+
+  &__image {
+    width: 740px;
+    height: 450px;
+    box-shadow: 15px 10px 30px #545454;
+    transition: transform .3s ease-in-out;
+
+    &:hover {
+      transform: scale(1.02);
+    }
+  }
+
+  &__button {
+    background-color: #999999;
+    color: #FFFFFF;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    width: 125px;
+    height: 35px;
+    font-family: $defaultFont;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    text-transform: uppercase;
+    transition: all .3s ease-in-out;
+
+    &:hover {
+      opacity: 0.7;
+      box-shadow: 10px 10px 20px #464646;
+    }
+  }
+}

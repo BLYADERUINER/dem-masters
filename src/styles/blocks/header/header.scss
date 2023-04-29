@@ -33,12 +33,13 @@
     font-family: $defaultFont;
     font-size: 18px;
     line-height: 20px;
-    transition: opacity .2s ease-in-out, transform .2s ease-in-out,-webkit-transform .2s ease-in-out;
+    transition: all .2s ease-in-out;
 
     &:hover {
       transform: translateY(-2px);
       opacity: 0.7;
       text-decoration: underline #717171;
+      font-weight: 500;
     }
   }
 }

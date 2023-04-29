@@ -1,3 +1,4 @@
+import Description from "./components/Description";
 import Header from "./components/Header";
 
 function App() {
@@ -6,7 +7,7 @@ function App() {
       <Header />
       <main>
         <div className="react-slick"></div>
-        <section className="description"></section>
+        <Description />
         <section className="examples"></section>
         <section className="contact"></section>
       </main>
