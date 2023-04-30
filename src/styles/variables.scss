@@ -1,4 +1,10 @@
 // Файл с константами стилей
-$backgroundBlue: #E5E5E5;
-$defaultFont: 'Roboto', sans-serif;
+$backgroundDefault: #ffffff; // цвет бэкграунда основа
+$defaultFont: 'Roboto', sans-serif; // дефолтный шрифит
+$colorGray: #2e2e2e;
+$colorRed: #D30000;
+$colorShadow: #545454;
+
+// фото
+$logo: url('../../public/logo1.png');
 $imageDescription: url('../../public/description.jpg');

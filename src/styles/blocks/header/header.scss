@@ -1,44 +1,47 @@
+// Стили Header
+
 .header {
   display: flex;
   justify-content: space-between;
-  border-bottom: 1px solid #999999;
+  border-bottom: 1px solid $colorGray;
   padding: 0 15px 15px;
 
   &__container {
-    max-width: 170px;
     display: flex;
     align-items: center;
+    max-width: 170px;
   }
 
   &__title {
-    font-family: $defaultFont;
-    font-size: 23px;
-    font-weight: 500;
-    line-height: 25px;
+    @include fontSetting(23px, 25px, 700);
+    color: $colorGray;
     margin: 0 10px;
-    color: #717171;
+  }
+
+  &__logo {
+    @include widthHeight(64px, 64px);
+    border-radius: 50%;
+    object-fit: cover;
   }
 
   &__navigation {
-    flex: 1;
-    max-width: 450px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    max-width: 450px;
+    flex: 1;
   }
 
   &__link {
+    @include fontSetting(18px, 20px, 400);
+    color: $colorGray;
     text-decoration: none;
-    color: #717171;
-    font-family: $defaultFont;
-    font-size: 18px;
-    line-height: 20px;
     transition: all .2s ease-in-out;
 
     &:hover {
-      transform: translateY(-2px);
       opacity: 0.7;
-      text-decoration: underline #717171;
+      transform: translateY(-2px);
+      text-decoration: underline $colorGray;
       font-weight: 500;
     }
   }

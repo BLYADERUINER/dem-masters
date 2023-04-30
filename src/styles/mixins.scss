@@ -1,1 +1,13 @@
 // Файл с миксинами
+
+@mixin fontSetting($size, $lHeight, $weight) { // mix настройка шрифтов
+  font-family: $defaultFont;
+  font-size: $size;
+  line-height: $lHeight;
+  font-weight: $weight;
+}
+
+@mixin widthHeight($w, $h) { // mix настройка ширины и высоты
+  width: $w;
+  height: $h;
+}
