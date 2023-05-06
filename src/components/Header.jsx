@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
-// Компонент Header
-function Header() {
+// Компонент Шапки
+function Header () {
   return (
     <header className="header page__header">
       <Link style={{textDecoration: 'none'}}>

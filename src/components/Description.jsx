@@ -1,4 +1,4 @@
-// Компонент Description
+// Компонент Описание
 function Description() {
   return (
     <section className="description">
