@@ -39,7 +39,7 @@
   }
 
   &__button {
-    @include fontSetting(12px, 14px, 400);
+    @include fontSetting(12px, 14px, 500);
     @include widthHeight(125px, 35px);
     @extend %buttonDefault;
     background-color: $colorRed;

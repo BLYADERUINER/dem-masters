@@ -1,3 +1,4 @@
+import Contacts from "./components/Contacts";
 import Description from "./components/Description";
 import Header from "./components/Header";
 import Reviews from "./components/Reviews";
@@ -11,8 +12,7 @@ function App() {
         <Description />
         <SimpleSlider />
         <Reviews />
-        <section className="examples"></section>
-        <section className="contact"></section>
+        <Contacts />
       </main>
       <footer>
         <p></p>
