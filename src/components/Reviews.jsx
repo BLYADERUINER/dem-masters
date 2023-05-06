@@ -3,7 +3,7 @@ import { reviewsList } from "../utils/reviews-list";
 // Компонент Отзывы
 function Reviews () {
   return (
-    <div className="reviews">
+    <section className="reviews">
       <h2 className="reviews__title">Отзывы клиентов</h2>
       <div className="reviews__container">
         {
@@ -25,7 +25,7 @@ function Reviews () {
           })
         }
       </div>
-    </div>
+    </section>
   );
 }
 

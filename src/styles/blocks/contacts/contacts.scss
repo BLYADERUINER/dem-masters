@@ -1,0 +1,87 @@
+.contacts {
+  padding: 40px 15px;
+
+  &__title {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    @include fontSetting(28px, 30px, 700);
+    color: $colorGray;
+    margin: 0 0 40px;
+
+    &::after {
+      position: absolute;
+      background-color: $colorRed;
+      @include widthHeight(74px, 5px);
+      bottom: -25px;
+      margin-left: -38px;
+      left: 50%;
+      content: '';
+      z-index: 1;
+    }
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 30px 0;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    background-color: $backgroundGrey;
+    border-radius: 10px;
+    @include widthHeight(600px, 300px);
+  }
+
+  &__text {
+    @include fontSetting(20px, 22px, 500);
+  }
+
+  &__input {
+    @include fontSetting(12px, 14px, 400);
+    @include widthHeight(350px, 25px);
+    outline: none;
+    border:none;
+    border-radius: 5px;
+    padding-left: 9px;
+
+    &:focus {
+      border: 1px solid $colorRed;
+    }
+  }
+
+  &__info {
+    @include widthHeight(500px, 15px);
+    @include fontSetting(12px, 14px, 400);
+  }
+
+  &__radio {
+    margin-right: 5px;
+  }
+
+  &__button {
+    @include fontSetting(12px, 14px, 500);
+    @include widthHeight(125px, 35px);
+    @extend %buttonDefault;
+    background-color: $colorRed;
+    color: #ffffff;
+    border-radius: 5px;
+    text-transform: uppercase;
+    transition: all .3s ease-in-out;
+    margin: 15px 0;
+
+    &:hover {
+      opacity: 0.7;
+      box-shadow: 10px 10px 20px $colorShadow;
+    }
+  }
+
+  &__map {
+    @include widthHeight(600px, 300px);
+    border: 1px solid $colorLightGrey;
+  }
+}
