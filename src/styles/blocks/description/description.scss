@@ -3,6 +3,7 @@
 .description {
   height: 50%;
   display: flex;
+  justify-content: space-between;
   padding: 45px 20px;
 
   &__container {
@@ -11,6 +12,7 @@
     justify-content: center;
     max-width: 950px;
     gap: 45px;
+    flex: auto;
   }
 
   &__title {

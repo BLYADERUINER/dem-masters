@@ -3,6 +3,7 @@ import "./slick.scss";
 import "./slick-theme.scss";
 import images from "./images";
 
+// Компонент слайдера
 function SimpleSlider() {
   const settings = {
     dots: true,
@@ -15,7 +16,6 @@ function SimpleSlider() {
   return (
     <div className="slider">
       <h2 className="slider__title">Примеры наших работ</h2>
-      <span className="slider__span" />
       <Slider {...settings}>
         {images.map((img, index) => <img key={index} src={img.link} alt='Фото примера наших работ' />)}
       </Slider>

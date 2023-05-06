@@ -1,5 +1,6 @@
 import Description from "./components/Description";
 import Header from "./components/Header";
+import Reviews from "./components/Reviews";
 import SimpleSlider from "./components/SimpleSlider";
 
 function App() {
@@ -7,9 +8,9 @@ function App() {
     <>
       <Header />
       <main>
-        <div className="react-slick"></div>
         <Description />
         <SimpleSlider />
+        <Reviews />
         <section className="examples"></section>
         <section className="contact"></section>
       </main>
