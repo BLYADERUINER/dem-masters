@@ -1,0 +1,55 @@
+// 1780px
+@mixin desktopMax() {
+  @media screen and (max-width: $breakpoint_desktopMax) {
+    @content;
+  }
+}
+
+// 1540px
+@mixin desktopMin() {
+  @media screen and (max-width: $breakpoint_desktopMin) {
+    @content;
+  }
+}
+
+// 1390px
+@mixin laptopMax() {
+  @media screen and (max-width: $breakpoint_laptopMax) {
+    @content;
+  }
+}
+
+// 1140px
+@mixin laptopMin() {
+  @media screen and (max-width:  $breakpoint_laptopMin) {
+    @content;
+  }
+}
+
+// 930px
+@mixin tablet() {
+  @media screen and (max-width: $breakpoint_tablet) {
+    @content;
+  }
+}
+
+// 730px
+@mixin phoneMax() {
+  @media screen and (max-width: $breakpoint_phoneMax) {
+    @content;
+  }
+}
+
+// 620px
+@mixin phoneMed() {
+  @media screen and (max-width: $breakpoint_phoneMed) {
+    @content;
+  }
+}
+
+// 435px
+@mixin phoneMin() {
+  @media screen and (max-width: $breakpoint_phoneMin) {
+    @content;
+  }
+}

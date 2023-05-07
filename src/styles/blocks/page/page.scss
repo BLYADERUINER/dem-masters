@@ -2,4 +2,16 @@
   padding: 30px 90px;
   max-width: 1920px;
   background: $backgroundDefault;
+
+  @include laptopMin { // брейкпойнт
+    padding: 30px 70px;
+  }
+
+  @include phoneMax {
+    padding: 20px 30px;
+  }
+
+  @include phoneMed  {
+    padding: 10px 10px;
+  }
 }
