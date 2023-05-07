@@ -7,11 +7,11 @@
     padding: 30px 70px;
   }
 
-  @include phoneMax {
+  @include phoneMax { // брейкпойнт
     padding: 20px 30px;
   }
 
-  @include phoneMed  {
+  @include phoneMed  { // брейкпойнт
     padding: 10px 10px;
   }
 }

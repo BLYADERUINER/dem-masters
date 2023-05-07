@@ -5,16 +5,6 @@
   justify-content: space-between;
   padding: 45px 20px;
 
-  @include tablet {
-    position: relative;
-    flex-direction: column-reverse;
-    align-items: center;
-  }
-
-  @include phoneMed {
-    padding: 20px 5px;
-  }
-
   &__container { // контейнер с текстом
     display: flex;
     flex-direction: column;
@@ -22,102 +12,18 @@
     max-width: 950px;
     gap: 45px;
     flex: auto;
-
-    @include desktopMin { // брейкпойнт
-      gap: 35px;
-    }
-
-    @include laptopMax { // брейкпойнт
-      gap: 30px;
-    }
-
-    @include laptopMin { // брейкпойнт
-      gap: 25px;
-    }
-
-    @include tablet {
-      position: absolute;
-      max-width: 480px;
-      top: 125px;
-      z-index: 1;
-    }
-
-    @include phoneMax {
-      max-width: 360px;
-      top: 100px;
-    }
-
-    @include phoneMed {
-      top: 45px;
-      max-width: 320px;
-      gap: 20px;
-    }
-
-    @include phoneMin {
-      max-width: 250px;
-      top: 45px;
-      gap: 15px;
-    }
   }
 
   &__title { // h1
     @include fontSetting(34px, 36px, 700);
     color: $colorGray;
     margin: 0;
-
-    @include desktopMax { // брейкпойнт
-      @include fontSetting(32px, 34px, 700);
-    }
-
-    @include desktopMin { // брейкпойнт
-      @include fontSetting(28px, 30px, 700);
-    }
-
-    @include laptopMax { // брейкпойнт
-      @include fontSetting(22px, 24px, 700);
-    }
-
-    @include laptopMin { // брейкпойнт
-      @include fontSetting(16px, 18px, 700);
-    }
-
-    @include tablet {
-      color: $colorWhite;
-    }
-
-    @include phoneMin {
-      @include fontSetting(12px, 14px, 700);
-    }
   }
 
   &__paragraph { // текст
     @include fontSetting(22px, 24px, 400);
     color: $colorGray;
     margin: 0;
-
-    @include desktopMax { // брейкпойнт
-      @include fontSetting(20px, 22px, 400);
-    }
-
-    @include desktopMin { // брейкпойнт
-      @include fontSetting(16px, 18px, 400);
-    }
-
-    @include laptopMax { // брейкпойнт
-      @include fontSetting(14px, 16px, 400);
-    }
-
-    @include laptopMin { // брейкпойнт
-      @include fontSetting(12px, 14px, 400);
-    }
-
-    @include tablet {
-      color: $colorWhite;
-    }
-
-    @include phoneMin {
-      @include fontSetting(8px, 10px, 400);
-    }
   }
 
   &__image { // картинка
@@ -126,46 +32,8 @@
     transition: transform .3s ease-in-out;
     border-radius: 10px;
 
-    @include desktopMax { // брейкпойнт
-      @include widthHeight(700px, 410px);
-    }
-
-    @include desktopMin { // брейкпойнт
-      @include widthHeight(660px, 370px);
-    }
-
-    @include laptopMax { // брейкпойнт
-      @include widthHeight(580px, 290px);
-    }
-
-    @include laptopMin { // брейкпойнт
-      @include widthHeight(580px, 250px);
-    }
-
-    @include tablet {
-      @include widthHeight(570px, 340px);
-      box-shadow: 5px 10px 30px $colorShadow;
-      filter: blur(2px);
-    }
-
-    @include phoneMax {
-      @include widthHeight(480px, 300px);
-    }
-
-    @include phoneMed {
-      @include widthHeight(380px, 250px);
-    }
-
-    @include phoneMin {
-      @include widthHeight(280px, 180px);
-    }
-
     &:hover {
       transform: scale(1.02);
-
-      @include tablet {
-        transform: none;
-      }
     }
   }
 
@@ -179,28 +47,185 @@
     text-transform: uppercase;
     transition: all .3s ease-in-out;
 
-    @include laptopMax { // брейкпойнт
-      @include fontSetting(10px, 12px, 500);
-      @include widthHeight(115px, 30px);
-    }
-
-    @include laptopMin { // брейкпойнт
-      @include widthHeight(100px, 25px);
-      @include fontSetting(8px, 10px, 500);
-    }
-
-    @include phoneMed {
-      @include widthHeight(70px, 20px);
-      @include fontSetting(6px, 8px, 500);
-    }
-
     &:hover {
       opacity: 0.7;
       box-shadow: 10px 10px 20px $colorShadow;
+    }
+  }
+}
 
-      @include tablet {
-        box-shadow: none;
+@include desktopMax { // 1780px
+  .description {
+    &__title {
+      @include fontSetting(32px, 34px, 700);
+    }
+
+    &__paragraph {
+      @include fontSetting(20px, 22px, 400);
+    }
+
+    &__image {
+      @include widthHeight(700px, 410px);
+    }
+  }
+}
+
+@include desktopMin { // 1540px
+  .description {
+    &__container {
+      gap: 35px;
+    }
+
+    &__title {
+      @include fontSetting(28px, 30px, 700);
+    }
+
+    &__paragraph {
+      @include fontSetting(16px, 18px, 400);
+    }
+
+    &__image {
+      @include widthHeight(660px, 370px);
+    }
+  }
+}
+
+
+@include laptopMax { // 1390px
+  .description {
+    &__container {
+        gap: 30px;
+    }
+
+    &__title {
+      @include fontSetting(22px, 24px, 700);
+    }
+
+    &__paragraph {
+      @include fontSetting(14px, 16px, 400);
+    }
+
+    &__image {
+      @include widthHeight(580px, 290px);
+    }
+
+    &__button {
+      @include fontSetting(10px, 12px, 500);
+      @include widthHeight(115px, 30px);
+    }
+  }
+}
+
+@include laptopMin { // 1140px
+  .description {
+    &__container {
+      gap: 25px;
+    }
+
+    &__title {
+      @include fontSetting(16px, 18px, 700);
+    }
+
+    &__paragraph {
+      @include fontSetting(12px, 14px, 400);
+    }
+
+    &__image {
+      @include widthHeight(580px, 250px);
+    }
+
+    &__button {
+      @include widthHeight(100px, 25px);
+      @include fontSetting(8px, 10px, 500);
+    }
+  }
+}
+
+@include tablet { // 930px
+  .description{
+    position: relative;
+    flex-direction: column-reverse;
+    align-items: center;
+
+    &__container {
+      position: absolute;
+      max-width: 480px;
+      top: 125px;
+      z-index: 1;
+    }
+
+    &__title {
+      color: $colorWhite;
+    }
+
+    &__paragraph {
+      color: $colorWhite;
+    }
+
+    &__image {
+      @include widthHeight(570px, 340px);
+      box-shadow: 5px 10px 30px $colorShadow;
+      filter: blur(2px);
+
+      &:hover {
+        transform: none;
       }
+    }
+  }
+}
+
+@include phoneMax { // 730px
+  .description {
+    &__container {
+      max-width: 360px;
+      top: 100px;
+    }
+
+    &__image {
+      @include widthHeight(480px, 300px);
+    }
+  }
+}
+
+@include phoneMed { // 620px
+  .description {
+    padding: 20px 5px;
+
+    &__container {
+      top: 45px;
+      max-width: 320px;
+      gap: 20px;
+    }
+
+    &__image {
+      @include widthHeight(380px, 250px);
+    }
+
+    &__button {
+      @include widthHeight(70px, 20px);
+      @include fontSetting(6px, 8px, 500);
+    }
+  }
+}
+
+@include phoneMin { // 435px
+  .description {
+    &__container {
+      max-width: 250px;
+      top: 45px;
+      gap: 15px;
+    }
+
+    &__title {
+      @include fontSetting(12px, 14px, 700);
+    }
+
+    &__paragraph {
+      @include fontSetting(8px, 10px, 400);
+    }
+
+    &__image {
+      @include widthHeight(280px, 180px);
     }
   }
 }

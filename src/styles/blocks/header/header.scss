@@ -6,19 +6,19 @@
   border-bottom: 1px solid $colorGray;
   padding: 0 15px 15px;
 
-  &__container {
+  &__container { // контейнер лого
     display: flex;
     align-items: center;
     max-width: 170px;
   }
 
-  &__title {
+  &__title { // лого нейм
     @include fontSetting(23px, 25px, 700);
     color: $colorGray;
     margin: 0 10px;
   }
 
-  &__logo {
+  &__logo { // лого
     @include widthHeight(64px, 64px);
     border-radius: 50%;
     object-fit: cover;
@@ -26,9 +26,10 @@
 
   &__navigation {
     display: flex;
+    justify-content: center;
     align-items: center;
-    justify-content: space-between;
-    max-width: 450px;
+    max-width: 420px;
+    gap: 50px;
     flex: 1;
   }
 
@@ -43,6 +44,79 @@
       transform: translateY(-2px);
       text-decoration: underline $colorGray;
       font-weight: 500;
+    }
+  }
+}
+
+@include laptopMax { // 1390px
+  .header {
+    &__link {
+      @include fontSetting(18px, 18px, 400);
+    }
+  }
+}
+
+@include laptopMin { // 1140px
+  .header {
+    padding: 0 15px 10px;
+
+    &__title {
+      @include fontSetting(20px, 22px, 700);
+    }
+
+    &__logo {
+      @include widthHeight(56px, 56px);
+    }
+
+    &__link {
+      @include fontSetting(16px, 18px, 400);
+    }
+  }
+}
+
+@include tablet { // 930px
+  .header {
+    &__navigation {
+      max-width: 300px;
+      gap: 20px;
+    }
+  }
+}
+
+@include phoneMed { // 620px
+  .header {
+    &__container {
+      max-width: 160px;
+    }
+
+    &__title {
+      @include fontSetting(16px, 18px, 700);
+    }
+
+    &__logo {
+      @include widthHeight(48px, 48px);
+      padding: 1px;
+    }
+
+    &__link {
+      @include fontSetting(12px, 14px, 400);
+    }
+  }
+}
+
+@include phoneMin { // 435px
+  .header {
+    &__container {
+      max-width: 140px;
+    }
+
+    &__title {
+      @include fontSetting(14px, 16px, 700);
+    }
+
+    &__logo {
+      @include widthHeight(42px, 42px);
+      padding: 1px;
     }
   }
 }

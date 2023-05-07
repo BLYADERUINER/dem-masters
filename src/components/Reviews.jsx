@@ -9,7 +9,7 @@ function Reviews () {
         {
           reviewsList.map((item) => {
             return(
-              <div className="reviews__item" key={item.id}>
+              <div className="reviews__item" key={item.id} id="review">
                 <h3 className="reviews__name">{item.name}</h3>
                 <p className="reviews__text">{item.review}</p>
                 <p className="reviews__date">{item.date}</p>
