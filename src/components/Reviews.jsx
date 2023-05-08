@@ -14,11 +14,11 @@ function Reviews () {
                 <p className="reviews__text">{item.review}</p>
                 <p className="reviews__date">{item.date}</p>
                 <div className="reviews__rating">
-                  <img src="./favorite.png" width={16} height={16} alt="star" />
-                  <img src="./favorite.png" width={16} height={16} alt="star" />
-                  <img src="./favorite.png" width={16} height={16} alt="star" />
-                  <img src="./favorite.png" width={16} height={16} alt="star" />
-                  <img src="./favorite.png" width={16} height={16} alt="star" />
+                  <img className="reviews__star" src="./favorite.png" alt="star" />
+                  <img className="reviews__star" src="./favorite.png" alt="star" />
+                  <img className="reviews__star" src="./favorite.png" alt="star" />
+                  <img className="reviews__star" src="./favorite.png" alt="star" />
+                  <img className="reviews__star" src="./favorite.png" alt="star" />
                 </div>
               </div>
             );

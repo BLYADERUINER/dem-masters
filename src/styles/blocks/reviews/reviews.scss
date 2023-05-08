@@ -72,4 +72,145 @@
     right: 15px;
     bottom: 5px;
   }
+
+  &__star {
+    @include widthHeight(16px, 16px);
+  }
 }
+
+@include desktopMax { // 1780px
+  .reviews {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__container {
+      flex-wrap: wrap;
+      max-width: 890px;
+      gap: 45px;
+    }
+
+
+  }
+}
+
+@include laptopMax { // 1390px
+  .reviews {
+
+    &__title {
+      @include fontSetting(18px, 20px, 700);
+    }
+
+    &__container {
+      gap: 20px;
+    }
+
+    &__item {
+      @include widthHeight(300px, 220px);
+    }
+
+    &__name {
+      @include fontSetting(16px, 18px, 700);
+    }
+
+    &__text {
+      @include fontSetting(14px, 16px, 400);
+    }
+
+    &__date {
+      @include fontSetting(10px, 12px, 400);
+    }
+  }
+}
+
+@include laptopMin { // 1140px
+  .reviews {
+    &__title {
+      @include fontSetting(16px, 18px, 700);
+      margin: 0 0 25px;
+
+      &::after {
+        bottom: -12px;
+        height: 3px;
+      }
+    }
+
+    &__container {
+      max-width: 760px;
+      padding: 10px;
+    }
+
+    &__item {
+      @include widthHeight(300px, 160px);
+    }
+
+    &__name {
+      @include fontSetting(14px, 16px, 700);
+    }
+
+    &__text {
+      @include fontSetting(12px, 14px, 400);
+    }
+
+    &__star {
+      @include widthHeight(14px, 14px);
+    }
+  }
+}
+
+@include tablet { // 930px
+  .reviews {
+    &__title {
+      @include fontSetting(14px, 16px, 700);
+    }
+
+    &__item {
+      @include widthHeight(440px, 120px);
+    }
+
+    &__name {
+      @include fontSetting(13px, 14px, 700);
+    }
+
+    &__text {
+      @include fontSetting(12px, 14px, 400);
+    }
+  }
+}
+
+@include phoneMed {  // 620px
+  .reviews {
+    padding: 20px 0;
+    margin: 0 15px;
+
+    &__item {
+      @include widthHeight(255px, 100px);
+    }
+
+    &__title {
+      @include fontSetting(12px, 14px, 700);
+
+      &::after {
+        bottom: -10px;
+        height: 1px;
+      }
+    }
+
+    &__name {
+      @include fontSetting(11px, 13px, 700);
+    }
+
+    &__text {
+      @include fontSetting(8px, 10px, 400);
+    }
+
+    &__date {
+      @include fontSetting(6px, 8px, 400);
+    }
+
+    &__star {
+      @include widthHeight(10px, 10px);
+    }
+  }
+}
+

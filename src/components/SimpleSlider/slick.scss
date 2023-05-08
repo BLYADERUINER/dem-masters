@@ -145,6 +145,11 @@
     &__title {
       font-size: 16px;
       line-height: 18px;
+
+      &::after {
+        bottom: -12px;
+        height: 3px;
+      }
     }
 
     img {
@@ -159,11 +164,6 @@
 
     &__title {
       margin: 0 0 25px;
-
-      &::after {
-        bottom: -12px;
-        height: 3px;
-      }
     }
   }
 }
@@ -182,6 +182,22 @@
 @media screen and (max-width: 730px) {
   .slider {
     padding: 20px 50px;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .slider {
+    padding: 20px 50px;
+
+    &__title {
+      font-size: 12px;
+      line-height: 14px;
+
+      &::after {
+        bottom: -10px;
+        height: 1px;
+      }
+    }
   }
 }
 

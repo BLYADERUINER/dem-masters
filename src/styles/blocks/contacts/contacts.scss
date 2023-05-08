@@ -85,3 +85,153 @@
     border: 1px solid $colorLightGrey;
   }
 }
+
+@include desktopMin { // 1540px
+  .contacts {
+    &__form {
+      @include widthHeight(500px, 300px);
+    }
+
+    &__map {
+      @include widthHeight(500px, 300px);
+    }
+
+    &__info {
+      margin: 10px;
+      max-width: 370px;
+    }
+  }
+}
+
+@include laptopMax { // 1390px
+  .contacts {
+    &__title {
+      @include fontSetting(18px, 20px, 700);
+    }
+
+    &__form {
+      @include widthHeight(430px, 300px);
+    }
+
+    &__text {
+      @include fontSetting(18px, 20px, 700);
+    }
+
+    &__map {
+      @include widthHeight(430px, 300px);
+    }
+
+    &__button {
+      @include fontSetting(10px, 12px, 500);
+      @include widthHeight(115px, 30px);
+    }
+  }
+}
+
+@include laptopMin { // 1140px
+  .contacts {
+    &__container {
+      flex-direction: column-reverse;
+      align-items: center;
+      gap: 15px;
+      padding: 10px 0;
+    }
+
+    &__title {
+      @include fontSetting(16px, 18px, 700);
+      margin: 0 0 25px;
+
+      &::after {
+        bottom: -12px;
+        height: 3px;
+      }
+    }
+
+    &__form {
+      @include widthHeight(530px, 260px);
+    }
+
+    &__text {
+      @include fontSetting(16px, 18px, 700);
+    }
+
+    &__map {
+      @include widthHeight(530px, 260px);
+    }
+
+    &__button {
+      @include widthHeight(100px, 25px);
+      @include fontSetting(8px, 10px, 500);
+    }
+  }
+}
+
+@include tablet { // 930px
+  .contacts {
+    &__title {
+      @include fontSetting(14px, 16px, 700);
+    }
+
+    &__form {
+      @include widthHeight(440px, 240px);
+    }
+
+    &__text {
+      @include fontSetting(14px, 16px, 700);
+    }
+
+    &__map {
+      @include widthHeight(440px, 240px);
+    }
+
+    &__input {
+      @include fontSetting(10px, 12px, 400);
+    }
+
+    &__info {
+      @include fontSetting(10px, 12px, 400);
+    }
+  }
+}
+
+@include phoneMed {  // 620px
+  .contacts {
+    padding: 20px 10px;
+
+    &__title {
+      @include fontSetting(12px, 14px, 700);
+
+      &::after {
+        bottom: -10px;
+        height: 1px;
+      }
+    }
+
+    &__form {
+      @include widthHeight(300px, 220px);
+    }
+
+    &__text {
+      @include fontSetting(14px, 16px, 700);
+    }
+
+    &__map {
+      @include widthHeight(300px, 220px);
+    }
+
+    &__input {
+      @include widthHeight(230px, 20px);
+      @include fontSetting(8px, 10px, 400);
+    }
+
+    &__info {
+      @include fontSetting(8px, 10px, 400);
+      max-width: 250px;
+    }
+
+    &__button {
+      @include widthHeight(70px, 20px);
+      @include fontSetting(6px, 8px, 500);
+    }
+  }
+}

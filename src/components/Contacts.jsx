@@ -6,7 +6,13 @@ function Contacts () {
     <section className="contacts">
       <h2 className='contacts__title'>Связаться с нами</h2>
       <div className='contacts__container'>
-        <form className='contacts__form' onSubmit={(evt) => evt.preventDefault()}>
+        <form
+          className='contacts__form'
+          onSubmit={(evt) => {
+            evt.preventDefault();
+            alert('Мы с вами свяжемся!');
+          }}
+        >
           <h3 className='contacts__text'>Отправить свои контакты</h3>
           <input className='contacts__input' placeholder='Ваше имя' type='text'  />
           <input className='contacts__input' placeholder='Номер телефона' type='text' />

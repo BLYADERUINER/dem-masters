@@ -28,3 +28,27 @@
     }
   }
 }
+
+@include laptopMin { // 1140px
+  .footer {
+    &__text {
+      @include fontSetting(14px, 16px, 400);
+    }
+
+    &__link {
+      @include fontSetting(14px, 16px, 400);
+    }
+  }
+}
+
+@include phoneMax { // 730px
+  .footer {
+    &__text {
+      @include fontSetting(12px, 14px, 400);
+    }
+
+    &__link {
+      @include fontSetting(12px, 14px, 400);
+    }
+  }
+}
