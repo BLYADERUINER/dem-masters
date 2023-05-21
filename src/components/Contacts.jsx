@@ -1,4 +1,4 @@
-import { YMaps, Map } from '@pbe/react-yandex-maps';
+import { YMaps, Map, Placemark } from '@pbe/react-yandex-maps';
 
 // Компонент контактов
 function Contacts () {
@@ -24,13 +24,15 @@ function Contacts () {
           <button className='contacts__button' type='submit'>Отправить</button>
         </form>
         <YMaps>
-          <Map className='contacts__map' defaultState={{ center: [53.212, 50.217], zoom: 15 }} />
+          {/* Карта, ее координаты и зум карты */}
+          <Map className='contacts__map' defaultState={{ center: [53.213, 50.217], zoom: 15 }}>
+            {/* Метка на карте и ее координаты */}
+            <Placemark defaultGeometry={[53.213, 50.216]} />
+          </Map>
         </YMaps>
       </div>
     </section>
   );
 }
-
-
 
 export default Contacts;

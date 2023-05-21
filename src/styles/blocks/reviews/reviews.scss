@@ -2,7 +2,6 @@
   padding: 40px 15px;
   background-color: $backgroundGrey;
 
-
   &__title {
     display: flex;
     justify-content: center;
@@ -165,7 +164,7 @@
     }
 
     &__item {
-      @include widthHeight(440px, 120px);
+      @include widthHeight(290px, 180px);
     }
 
     &__name {
@@ -184,7 +183,7 @@
     margin: 0 15px;
 
     &__item {
-      @include widthHeight(255px, 100px);
+      @include widthHeight(185px, 130px);
     }
 
     &__title {

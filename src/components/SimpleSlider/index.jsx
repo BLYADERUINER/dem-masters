@@ -5,6 +5,7 @@ import images from "./images";
 
 // Компонент слайдера
 function SimpleSlider() {
+  // Настройка слайдера
   const settings = {
     dots: true,
     infinite: true,
